@@ -4,6 +4,19 @@ This repository contains a C implementation of the Wirepas Dual MCU API.
 The dual mcu api allows the exchange of data between the host and the
 Wirepas Mesh sink.
 
+## building
+ Linux:
+        mkdir build && cd build
+        cmake ..
+        make
+
+ Win32:
+        md build
+        cd build cmake .. -G "MinGW Makefiles"
+        mingw32-make
+
+
+
 ## C Library
 
 The C implementation is available from [lib](./lib) and is structured in the
