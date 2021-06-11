@@ -24,7 +24,7 @@ static inline void get_timestamp(char timestamp[37])
     clock_gettime(CLOCK_REALTIME, &spec);
 
     s = spec.tv_sec;
-    localtime_r(&s, &result);
+    localtime_s(&s, &result);
 
     ms = spec.tv_nsec / 1.0e6;  // Convert nanoseconds to milliseconds
 

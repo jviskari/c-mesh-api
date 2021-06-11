@@ -6,6 +6,7 @@ if(WIN32)
     add_library(win32
     ${CMAKE_CURRENT_SOURCE_DIR}/win32/logger.c
     ${CMAKE_CURRENT_SOURCE_DIR}/win32/platform.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/win32/winserial.c
     )
 
     target_include_directories(win32

@@ -369,7 +369,7 @@ bool Platform_init()
     return true;
 
 error4:
-    pthread_kill(thread_polling, SIGKILL);
+    pthread_kill(thread_polling, 0 /*SIGKILL*/); // only 0 supported
 error3:
     pthread_mutex_destroy(&m_poll_mutex);
 error2_2:
@@ -440,4 +440,13 @@ void Platform_close()
     pthread_mutex_destroy(&m_queue_mutex);
     pthread_mutex_destroy(&m_poll_mutex);
     pthread_mutex_destroy(&sending_mutex);
+}
+
+//Wrapper functions
+#include <stdio.h>
+#include <conio.h>
+
+int pause()
+{
+    while (1) if (kbhit()) break;
 }
