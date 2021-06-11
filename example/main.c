@@ -15,9 +15,12 @@
 #define MAX_LOG_LEVEL INFO_LOG_LEVEL
 #include "logger.h"
 
+#ifndef _WIN32
 // Default serial port
 char * port_name = "/dev/ttyACM0";
-
+#else
+char * port_name = "COM3";
+#endif
 // Node configuration
 #define NODE_ADDRESS 0x1
 #define NODE_ROLE APP_ROLE_SINK

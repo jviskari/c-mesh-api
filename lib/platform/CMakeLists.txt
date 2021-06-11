@@ -19,7 +19,7 @@ if(WIN32)
     target_compile_definitions(win32 PUBLIC
                     -D_REENTRANT)
 
-    target_link_libraries(win32 wpc)
+    target_link_libraries(win32 wpc rs232)
     #use platform as dependency
     add_library(platform ALIAS win32)
 else()
