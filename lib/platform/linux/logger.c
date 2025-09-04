@@ -1,3 +1,4 @@
+#ifndef NO_PLATFORM_LOGGER
 /* Wirepas Oy licensed under Apache License, Version 2.0
  *
  * See file LICENSE for full license details.
@@ -86,3 +87,4 @@ void Platform_print_buffer(uint8_t * buffer, int size)
     }
     printf("\n");
 }
+#endif
