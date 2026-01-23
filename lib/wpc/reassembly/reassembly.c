@@ -320,6 +320,7 @@ void reassembly_garbage_collect()
 
         full_packet_t *fp, *tmp;
         uint32_t messages_removed = 0;
+        (void) messages_removed; // Avoid unused variable warning
         HASH_ITER(hh, m_packets, fp, tmp) {
             uint32_t last_activity =
                 (Platform_get_timestamp_ms_monotonic() - fp->timestamp_ms_epoch_last) / 1000;
